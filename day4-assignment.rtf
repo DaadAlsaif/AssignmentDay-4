@@ -1,0 +1,106 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2638
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red15\green112\blue1;\red255\green255\blue255;
+\red0\green0\blue255;\red0\green0\blue109;\red144\green1\blue18;\red101\green76\blue29;\red11\green90\blue180;
+\red15\green112\blue1;\red157\green0\blue210;\red19\green118\blue70;\red11\green90\blue180;\red101\green76\blue29;
+\red0\green0\blue109;\red144\green1\blue18;\red19\green118\blue70;\red157\green0\blue210;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c50196\c0;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c0\c0\c100000;\cssrgb\c0\c6275\c50196;\cssrgb\c63922\c8235\c8235;\cssrgb\c47451\c36863\c14902;\cssrgb\c0\c43922\c75686;
+\cssrgb\c0\c50196\c0;\cssrgb\c68627\c0\c85882;\cssrgb\c3529\c52549\c34510;\cssrgb\c0\c43922\c75686;\cssrgb\c47451\c36863\c14902;
+\cssrgb\c0\c6275\c50196;\cssrgb\c63922\c8235\c8235;\cssrgb\c3529\c52549\c34510;\cssrgb\c68627\c0\c85882;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+1-\cf3 \cb4 \outl0\strokewidth0 \strokec3 /*mplement a chess board (with its pieces) in the terminal use the \cf0 \cb1 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \cb4 \strokec3       following diagram is an example of how to show it in the termnial.\cf0 \cb1 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \outl0\strokewidth0 \
+\cf5 \cb4 let\cf0  \cf6 arr\cf0  =[\cf7 'a'\cf0 ,\cf7 'b'\cf0 ,\cf7 'c'\cf0 ,\cf7 'd'\cf0 ,\cf7 'e'\cf0 ,\cf7 'f'\cf0 ,\cf7 'g'\cf0 ,\cf7 'h'\cf0 ];\cb1 \
+\cf5 \cb4 function\cf0  \cf8 arrSpace\cf0 ()\{\cb1 \
+\cb4         \cf5 const\cf0  \cf9 l\cf0 = \cf6 arr\cf0 .\cf8 join\cf0 (  \cf7 ' -'\cf0 ) ;\cb1 \
+\cb4             \cf6 console\cf0 .\cf8 log\cf0 (\cf9 l\cf0 );\cb1 \
+\
+\cb4 \}\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf10 \cb4 //1-use 2D array for chess board\cf0 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb4 const\cf0  \cf9 chessBoard\cf0 =[\cb1 \
+\cb4 [\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ],\cb1 \
+\cb4 [\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ],\cb1 \
+\cb4 [\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ],\cb1 \
+\cb4 [\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ],\cb1 \
+\cb4 [\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ],\cb1 \
+\cb4 [\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ],\cb1 \
+\cb4 [\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ],\cb1 \
+\cb4 [\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ,\cf7 ' '\cf0 ],\cb1 \
+\cb4 ];\cb1 \
+\
+\cf5 \cb4 function\cf0  \cf8 printBoard\cf0 ()\{\cb1 \
+\cb4     \cf11 for\cf0 (\cf5 const\cf0  \cf9 row\cf0  \cf5 of\cf0  \cf9 chessBoard\cf0 )\cb1 \
+\cb4     \{\cf5 const\cf0  \cf9 line\cf0  = \cf9 row\cf0 .\cf8 join\cf0 (\cf7 ' | '\cf0 ) ;\cb1 \
+\cb4             \cf6 console\cf0 .\cf8 log\cf0 (\cf9 line\cf0 );\cb1 \
+\cb4             \cf6 console\cf0 .\cf8 log\cf0 (\cf7 '  ---------------------'\cf0 );\cb1 \
+\cb4     \cb1 \
+\cb4      \}\cb1 \
+\
+\cb4     \}\cb1 \
+\cb4     \cf8 arrSpace\cf0 ();\cb1 \
+\cb4     \cf8 printBoard\cf0 ();\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+2-\
+\cf5 const\cf0  \cf9 studentsInfo\cf0 =[\cb1 \
+\cb4     \{\cf6 id:\cf12 1\cf0 ,\cf6 Name:\cf7 'Mohammed'\cf0 ,\cf6 age:\cf12 18\cf0 ,\cf6 level:\cf7 'intermediate'\cf0 ,\cf6 tasksCompleted:\cf12 8\cf0 \},\cb1 \
+\
+\cb4     \{\cf6 id:\cf12 2\cf0 ,\cf6 Name:\cf7 'Omar'\cf0 ,\cf6 age:\cf12 22\cf0 ,\cf6 level:\cf7 'beginner'\cf0 ,\cf6 tasksCompleted:\cf12 2\cf0 \},\cb1 \
+\
+\cb4     \{\cf6 id:\cf12 3\cf0 ,\cf6 Name:\cf7 'Sarah'\cf0 ,\cf6 age:\cf12 20\cf0 ,\cf6 level:\cf7 'beginner'\cf0 ,\cf6 tasksCompleted:\cf12 4\cf0 \},\cb1 \
+\
+\cb4     \{\cf6 id:\cf12 4\cf0 ,\cf6 Name:\cf7 'Saleh'\cf0 ,\cf6 age:\cf12 15\cf0 ,\cf6 level:\cf7 'intermediate'\cf0 ,\cf6 tasksCompleted:\cf12 6\cf0 \},\cb1 \
+\
+\cb4     \{\cf6 id:\cf12 5\cf0 ,\cf6 Name:\cf7 'Saud'\cf0 ,\cf6 age:\cf12 30\cf0 ,\cf6 level:\cf7 'advanced'\cf0 ,\cf6 tasksCompleted:\cf12 10\cf0 \},\cb1 \
+\
+\cb4     \{\cf6 id:\cf12 6\cf0 ,\cf6 Name:\cf7 'Amani'\cf0 ,\cf6 age:\cf12 25\cf0 ,\cf6 level:\cf7 'advanced'\cf0 ,\cf6 tasksCompleted:\cf12 10\cf0 \},\cb1 \
+\
+\cb4     \{\cf6 id:\cf12 7\cf0 ,\cf6 Name:\cf7 'Lojain'\cf0 ,\cf6 age:\cf12 23\cf0 , \cf6 level:\cf7 'advanced'\cf0 ,\cf6 tasksCompleted:\cf12 10\cf0 \}]\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb4 \outl0\strokewidth0 \strokec2  \cf3 \cb4 \strokec3 //display every person with their age and tasks completed in a sentence\cf0 \cb1 \strokec2 \
+\
+\cb4     \cb1 \
+\cb4     \cf13 \cb4 \strokec13 studentsInfo\cf0 \cb4 \strokec2 .\cf14 \strokec14 map\cf0 \strokec2 (\cf15 \strokec15 x\cf0 \strokec2  \cf5 \strokec5 =>\cf0 \strokec2  \cf15 \strokec15 console\cf0 \strokec2 .\cf14 \strokec14 log\cf0 \strokec2 (\cf16 \strokec16 '\{age :'\cf0 \strokec2  + \cf15 \strokec15 x\cf0 \strokec2 .\cf15 \strokec15 age\cf0 \strokec2  + \cf16 \strokec16 ' '\cf0 \strokec2 +\cf16 \strokec16 'TasksCompleted : '\cf0 \strokec2  + \cf15 \strokec15 x\cf0 \strokec2 .\cf15 \strokec15 tasksCompleted\cf0 \strokec2  +\cf16 \strokec16 ' \}'\cf0 \strokec2 ));\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \outl0\strokewidth0 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb4 \outl0\strokewidth0 \strokec2   \cf3 \strokec3 //sort them in the order of completed tasks from higher to lower\
+\cf0 \strokec2  \cf5 \cb4 \strokec5 let\cf0 \cb4 \strokec2  \cf15 \cb4 \strokec15 sortTheTasks\cf0 \cb4 \strokec2  = \cf13 \cb4 \strokec13 studentsInfo\cf0 \cb4 \strokec2 .\cf14 \cb4 \strokec14 sort\cf0 \cb4 \strokec2 ((\{\cf15 \cb4 \strokec15 tasksCompleted\cf0 \cb4 \strokec2 :\cf15 \cb4 \strokec15 a\cf0 \cb4 \strokec2 \}, \{\cf15 \cb4 \strokec15 tasksCompleted\cf0 \cb4 \strokec2 :\cf15 \cb4 \strokec15 b\cf0 \cb4 \strokec2 \}) \cf5 \cb4 \strokec5 =>\cf0 \cb4 \strokec2  \cf15 \cb4 \strokec15 b\cf0 \cb4 \strokec2 -\cf15 \cb4 \strokec15 a\cf0 \cb4 \strokec2 );\cb1 \
+\cb4     \cf15 \cb4 \strokec15 console\cf0 \cb4 \strokec2 .\cf14 \cb4 \strokec14 log\cf0 \cb4 \strokec2 (\cf15 \cb4 \strokec15 sortTheTasks\cf0 \cb4 \strokec2 );\cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf3 \cb4 \strokec3 //display only people who are 25 or older\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2  \cf5 \cb4 \strokec5 let\cf0 \cb4 \strokec2  \cf15 \cb4 \strokec15 ageAdult\cf0 \cb4 \strokec2 =\cf13 \cb4 \strokec13 studentsInfo\cf0 \cb4 \strokec2 .\cf14 \cb4 \strokec14 filter\cf0 \cb4 \strokec2 (\cf15 \cb4 \strokec15 studentsInfo\cf5 \strokec5 =>\cf15 \strokec15 studentsInfo\cf0 \cb4 \strokec2 .\cf15 \cb4 \strokec15 age\cf0 \cb4 \strokec2 >=\cf17 \cb4 \strokec17 25\cf0 \cb4 \strokec2 );\cb1 \
+\cb4     \cf15 \cb4 \strokec15 console\cf0 \cb4 \strokec2 .\cf14 \cb4 \strokec14 log\cf0 \cb4 \strokec2 (\cf15 \cb4 \strokec15 ageAdult\cf0 \cb4 \strokec2 );\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \cb4 \strokec3 /*add a new property to each person that expresses if they passed or\cf0 \cb1 \strokec2 \
+\cf3 \cb4 \strokec3        not ( 5 or more completed tasks = passed, less than 5 = not passed)\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb1 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb4     \cf18 \cb4 \strokec18 for\cf0 \cb4 \strokec2 (\cf5 \cb4 \strokec5 let\cf0 \cb4 \strokec2  \cf15 \cb4 \strokec15 i\cf0 \cb4 \strokec2 =\cf17 \cb4 \strokec17 0\cf0 \cb4 \strokec2 ;\cf15 \cb4 \strokec15 i\cf0 \cb4 \strokec2 < \cf13 \cb4 \strokec13 studentsInfo\cf0 \cb4 \strokec2 .\cf15 \cb4 \strokec15 length\cf0 \cb4 \strokec2 ;\cf15 \cb4 \strokec15 i\cf0 \cb4 \strokec2 ++)\{\cb1 \
+\cb4         \cf18 \cb4 \strokec18 if\cf0 \cb4 \strokec2 (\cf13 \cb4 \strokec13 studentsInfo\cf0 \cb4 \strokec2 [\cf15 \cb4 \strokec15 i\cf0 \cb4 \strokec2 ].\cf15 \cb4 \strokec15 tasksCompleted\cf0 \cb4 \strokec2  >=\cf17 \cb4 \strokec17 5\cf0 \cb4 \strokec2 )\{\cb1 \
+\cb4             \cf13 \cb4 \strokec13 studentsInfo\cf0 \cb4 \strokec2 [\cf15 \cb4 \strokec15 i\cf0 \cb4 \strokec2 ].\cf15 \cb4 \strokec15 grade\cf0 \cb4 \strokec2  = \cf16 \cb4 \strokec16 'passed'\cf0 \cb4 \strokec2 ;\cb1 \
+\cb4         \}\cb1 \
+\cb4         \cf18 \cb4 \strokec18 else\cf0 \cb4 \strokec2 \{\cb1 \
+\cb4             \cf13 \cb4 \strokec13 studentsInfo\cf0 \cb4 \strokec2 [\cf15 \cb4 \strokec15 i\cf0 \cb4 \strokec2 ].\cf15 \cb4 \strokec15 grade\cf0 \cb4 \strokec2  = \cf16 \cb4 \strokec16 'Failed'\cf0 \cb1 \strokec2 \
+\cb4         \}\cb1 \
+\cb4        \cb1 \
+\cb4       \}\cb1 \
+\
+\
+}
